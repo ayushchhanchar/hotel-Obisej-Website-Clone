@@ -1,0 +1,936 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    overflow-x: hidden;
+}
+#nav{
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1px 80px;
+    z-index: 99;
+}
+#nav #nav-part1{
+    width: 40vw;
+}
+#nav #nav-part1 .line{
+    height: 0.3vh;
+    width: 4vw;
+    background-color: #434b34;
+    margin-bottom: 5px;
+}
+#nav #nav-part2 button{
+    padding: 1.5vh 1.6vw;
+    font-size: 1vw;
+    background-color: transparent;
+    border: 1px solid #434b34;
+    color: #434b34;
+    font-weight: 500;
+    margin-left: 2vw;
+    border-radius: 50px;
+}
+#nav #nav-part2 button:nth-last-child(1){
+    background-color: #434b34;
+    color: white;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+}
+#page1 svg{
+    scale: .25;
+    fill: #434b34;
+    position: absolute;
+    top: -14vh;
+    z-index: 9;
+}
+#page1 img{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position:center;
+}
+#page2{
+    height: 160vh;
+    width: 100vw;
+    background-color: #5B6647;
+    padding-top: 2vh;
+    position: relative;
+}
+#page2 #svg1{
+    scale: 1;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+#page2 #text-cont{
+    position: relative;
+    z-index: 99;
+    padding-top: 20vh;
+    text-align: center;
+    
+}
+#page2 #text-cont h2{
+    font-size: 4.5vw;
+    font-family: PP woodland;
+    font-weight: 100;
+    color: #434B34;
+}
+
+
+#page2 #text-cont h2 span{
+    font-family: PP woodland;
+}
+#page2 #svg3{
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    width: 300vw;
+    fill: #babaa7;
+}
+
+#page2 #svg2{
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    width: 300vw;
+    fill:#5B6647;
+}
+
+
+
+
+#page3{
+    height: 200vh;
+    width: 100vw;
+    background-color: #F7F7EE;
+    position: relative;
+}
+#page3 #text-cont2{
+    position: relative;
+    z-index: 99;
+    padding-top: 45vh;
+    text-align: center;
+}
+#page3 #text-cont2 h1{
+    font-size: 4.5vw;
+    font-family: PP woodland;
+    font-weight: 400;
+    color: #434B34;
+}
+#page3 #text-cont2 h1 span{
+    font-family: PP woodland;
+}
+#page3 h2{
+    position: absolute;
+    font-size: 1vw;
+    top: 100vh;
+    left: 10vw;
+}
+#page3 h3{
+    position: absolute;
+    top: 120vh;
+    left: 10vw;
+    font-size: 1.5vw;
+    color: #444C36;
+}
+#page3 #img1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60vh;
+    width: 45vw;
+    background-image: url(img1.jpg);
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+}
+#page3 #img2{
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    height: 55vh;
+    width: 38vw;
+    background-image: url(img2.jpg);
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+}
+#page3 #img3{
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    height: 28vh;
+    width: 18vw;
+    background-image: url(img3.jpg);
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+}
+
+#page4 {
+    min-height: 100vh;
+    padding: 13vw 5vw;
+    background-color: #f7f7ee;
+  }
+  
+  #page4 .elem {
+    height: 160px;
+    width: 100%;
+    border: 1px solid #5b6647;
+    /* background-color: red; */
+    border-top: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    overflow: hidden;
+  }
+  
+  #page4 .elem:nth-child(1) {
+    border-top: 1px solid #5b6647;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  #page4 .elem:nth-last-child(1) {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .elem-part1 {
+    height: 100%;
+    width: 22%;
+  
+    position: absolute;
+    -webkit-transition: all ease-out 0.4s;
+    -o-transition: all ease-out 0.4s;
+    transition: all ease-out 0.4s;
+    left: 0;
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  
+  .elem-part1 img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  .elem-part2 {
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all ease-out 0.4s;
+    -o-transition: all ease-out 0.4s;
+    transition: all ease-out 0.4s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: #434b34;
+    padding: 3.5vw 4vw;
+  }
+  .elex-1 h3 {
+    margin-bottom: 0.1vw;
+    font-family: pp woodland;
+    font-size: 2.5vw;
+    font-weight: 100;
+  }
+  .elex-1 p {
+    font-size: 0.9vw;
+  }
+  .elex-2 h5 {
+    background-color: #5b6647;
+    color: #e3e3c4;
+    padding: 4px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9vw;
+    -webkit-transition: all ease-out 0.4s;
+    -o-transition: all ease-out 0.4s;
+    transition: all ease-out 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
+  .elex-2 h5 i {
+    position: absolute;
+    background-color: #e3e3c4;
+    color: #5b6647;
+    padding: 5px 18px;
+    left: 0;
+    opacity: 0;
+    top: 0;
+  }
+  .elem:hover .elem-part2 {
+    width: 78%;
+    background-color: #5b6647;
+    color: #e3e3c4;
+  }
+  
+  .elem:hover .elem-part1 {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+  
+  .elem:hover .elex-2 h5 {
+    background-color: #e3e3c4;
+    color: #5b6647;
+  }
+  
+  .elem:hover .elex-2 h5 i {
+    opacity: 1;
+  }
+
+#page5{
+    height: 110vh;
+    width: 100%;
+    background-color: #f7f7ee;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #f7f7ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    transform: scale(0.6) translateX(-300px) translateY(170px);
+  }
+
+  .swiper-button-prev{
+    background-color: #434B34;
+    color: white;
+    width: 3.3vw;
+    height: 1.3vw;
+    border-radius: 50px;
+    position: absolute;
+    top: 3.5vh;
+    left: 84vw;
+  }
+  .swiper-button-prev::after{
+    content: "";
+    
+  }
+  .swiper-button-next{
+    background-color: #434B34;
+     color: white;
+     width: 3.3vw;
+     height: 1.3vw;
+    border-radius: 50px;
+    position: absolute;
+    top: 3.5vh;
+    right: 5vw;
+  }
+
+ .swiper-button-next::after{
+   content: "";
+ }
+
+  .swiper-slide {
+    width: 80%;
+    height: 80%;
+  }
+  .swiper-slide-active img{
+    transform: scale(1) translateX(0) translateY(0);
+  }
+  .swiper-pagination{
+    position: absolute;
+    top: 0.5vh;
+    left: 87.5vw;
+    height: 1vh;
+    width: 3vw;
+  }
+
+
+
+
+#page6{
+    height: 210vh;
+    width: 100%;
+    position: relative;
+    background-color: #03364F;
+}
+#page6 #svgg1{
+    margin-top: -13vh;
+    rotate: 180deg;
+    width: 200vw;
+    fill: #E3E3C4;
+}
+#page6 #svgg2{
+    rotate: 180deg;
+    width: 200vw;
+    margin-top: -16vh;
+    fill: #03364F;
+}
+#page6 #text-cont3{
+    position: relative;
+    top: -14%;
+    z-index: 99;
+    padding-top: 45vh;
+    text-align: center;
+}
+#page6 #text-cont3 h2{
+    font-size: 4.5vw;
+    font-family: PP woodland;
+    font-weight: 400;
+    color: #043F5D;
+}
+#page6 #text-cont2 h2 span{
+    font-family: PP woodland;
+}
+
+#page6 h6{
+    font-size: 1vw;
+    color: white;
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+    text-align: center;
+    font-weight: 200;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#page6 #imgg1{
+    height: 32vh;
+    width: 22vw;
+    border-radius: 25px;
+    position: absolute;
+    top: 35%;
+    left: 5%;
+}
+#page6 #imgg1 img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+}
+#page6 #imgg1 h3{
+    font-size: 2.3vw;
+    color: #babaa7;
+    font-weight: 500;
+    position: absolute;
+    top: 110%;
+    left: 1%;
+    font-family: PP woodland;
+}
+#page6 #imgg1 h4{
+    font-size: 0.8vw;
+    color: white;
+    font-weight: 200;
+    position: absolute;
+    top: 129%;
+    left: 1%;
+    font-family: PP woodland;
+}
+
+#page6 #imgg2{
+    height: 32vh;
+    width: 22vw;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+#page6 #imgg2 img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+}
+#page6 #imgg2 h3{
+    font-size: 2.3vw;
+    color: #babaa7;
+    font-weight: 500;
+    position: absolute;
+    top: 110%;
+    left: 1%;
+    font-family: PP woodland;
+}
+#page6 #imgg2 h4{
+    font-size: 0.8vw;
+    color: white;
+    font-weight: 200;
+    position: absolute;
+    top: 129%;
+    left: 1%;
+    font-family: PP woodland;
+}
+
+#page6 #imgg3{
+    height: 32vh;
+    width: 22vw;
+    border-radius: 25px;
+    position: absolute;
+    top: 35%;
+    left: 75%;
+}
+#page6 #imgg3 img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+}
+#page6 #imgg3 h3{
+    font-size: 2.3vw;
+    color: #babaa7;
+    font-weight: 500;
+    position: absolute;
+    top: 110%;
+    left: 1%;
+    font-family: PP woodland;
+}
+#page6 #imgg3 h4{
+    font-size: 0.8vw;
+    color: white;
+    font-weight: 200;
+    position: absolute;
+    top: 129%;
+    left: 1%;
+    font-family: PP woodland;
+}
+#page6 h5{
+    font-size: 2.5vw;
+    position: absolute;
+    color: white;
+    top: 180vh;
+    left: 40vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+#page6 #svgg3{
+    position: absolute;
+    width: 200vw;
+    top: 101%;
+    fill: #E3E3C4;
+}
+#page6 #svgg4{
+    position: absolute;
+    width: 200vw;
+    top: 100%;
+    fill: #03364F;
+    left: -15%;
+}
+#page7{
+    height: 240vh;
+    width: 100%;
+    background-color: #F7F7EE;
+}
+#page7 #text-cont4{
+    position: relative;
+    top: -2%;
+    z-index: 99;
+    padding-top: 45vh;
+    text-align: center;
+}
+#page7 #text-cont4 h3{
+    font-size: 4vw;
+    font-family: PP woodland;
+    font-weight: 400;
+    color: #E3E3C4;
+}
+#page7 #text-cont4 h3 span{
+    font-family: PP woodland;
+}
+#page7 #systum{
+    width: 100vw;
+    height: 75vh;
+    position: relative;
+    margin-top: 20vh;
+}
+#page7 #systum #pic1{
+    height: 75vh;
+    width: 50vw;
+    position: absolute;
+    left: -5%;
+}
+#page7 #systum #pic1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+}
+#page7 #systum #pic2{
+    height: 75vh;
+    width: 50vw;
+    position: absolute;
+    left: 55%;
+}
+#page7 #systum #pic2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+}
+#page7 #systum #text{
+    height: 75vh;
+    width: 40vh;
+    position: absolute;
+    margin-left: 40vw;
+}
+#page7 #systum #text h1{
+    font-size: 4vw;
+    font-family: PP woodland;
+    text-align: center;
+    font-weight: 300;
+    line-height: 60px;
+    margin-top: 10vh;
+}
+#page7 #systum #text h2{
+    font-size: 1.2vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 5vh;
+}
+#page7 #systum #text h3{
+    font-size: 2.4vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10vh;
+    color: #434B34;
+}
+#page8{
+    height: 100vh;
+    width: 100vw;
+}
+#page8 img{
+    object-fit: cover;
+    object-position: center;
+    height: 80%;
+    width: 100%;
+}
+#page9{
+    height: 200vh;
+    width: 100%;
+    background-color:#5B6647;
+    position: relative;
+}
+#page9 svg{
+    margin-bottom: -200vh;
+}
+#page9 #svgggg1{
+    position: absolute;
+    z-index: 9;
+    top: -4.5%;
+    rotate: 180deg;
+    width: 200vw;
+    fill: #E3E3C4;
+}
+#page9 #svgggg2{
+    position: absolute;
+    z-index: 99;
+    rotate: 180deg;
+    width: 200vw;
+    top: -4.5%;
+    left: -15%;
+    fill: #5B6647;
+}
+#page9 #text-cont5{
+    position: relative;
+    top: -30vh;
+    z-index: 99;
+    padding-top: 45vh;
+    text-align: center;
+}
+#page9 #text-cont5 h6{
+    font-size: 4.5vw;
+    font-family: PP woodland;
+    font-weight: 400;
+    color: #434B34;
+}
+#page9 #text-cont5 h6 span{
+    font-family: PP woodland;
+}
+#page9 h5{
+    font-size: 1.2vw;
+    color: white;
+    position: absolute;
+    top: 50vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    left: 32vw;
+}
+
+#page9 #picture1{
+    height: 47vh;
+    width: 23vw;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+
+}
+#page9 #picture1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+}
+#page9 #picture2{
+    height: 107vh;
+    width: 33vw;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+#page9 #picture2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+}
+#page9 #picture3{
+    height: 47vh;
+    width: 23vw;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+
+}
+#page9 #picture3 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+}
+#page9 h4{
+    font-size: 2.5vw;
+    color: white;
+    position: absolute;
+    top: 90%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    left: 45%;
+    font-weight: 400;
+    z-index: 99;
+}
+#page10{
+    height: 230vh;
+    width: 100%;
+    background-color: #F7F7EE;
+    position: relative;
+}
+#page10 h1{
+    font-size: 4vw;
+    font-family: pp woodland;
+    position: absolute;
+    top: 20vh;
+    left: 37vw;
+    font-weight: 300;
+    color: #434B34;
+}
+#page10 h2{
+    font-size: 1vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    line-height: 15px;
+    top: 35vh;
+    text-align: center;
+    left: 42vw;
+    font-weight: 400;
+    color: #434B34;
+}
+#page10 #photo1{
+    height: 75vh;
+    width: 38vw;
+    position: absolute;
+    top: 55vh;
+    left: 6vw;
+}
+#page10 #photo1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+}
+#page10 h3{
+    font-size: 2.7vw;
+    font-family: pp woodland;
+    position: absolute;
+    top: 70vh;
+    left: 60vw;
+    font-weight: 300;
+    color: #434B34;
+}
+#page10 h4{
+    font-size: 1vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    line-height: 20px;
+    top: 78vh;
+    text-align: left;
+    left: 60vw;
+    font-weight: 400;
+    color: #434B34;
+}
+#page10 h5{
+    font-size: 1.6vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    line-height: 20px;
+    top: 98vh;
+    text-align: left;
+    left: 60vw;
+    font-weight: 400;
+    color: #434B34;
+}
+#page10 #photo2{
+    height: 75vh;
+    width: 38vw;
+    position: absolute;
+    top: 145vh;
+    left: 55vw;
+}
+#page10 #photo2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+}
+#page10 h6{
+    font-size: 3vw;
+    font-family: pp woodland;
+    position: absolute;
+    top: 160vh;
+    left: 20vw;
+    text-align: left;
+    font-weight: 300;
+    color: #434B34;
+}
+#page10 p{
+    font-size: 1vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    line-height: 20px;
+    top: 178vh;
+    text-align: left;
+    left: 20vw;
+    font-weight: 400;
+    color: #434B34;
+}
+#page11{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#page11 img{
+    object-fit: cover;
+    object-position: center;
+    height: 80%;
+    width: 100%;
+}
+#page11 #boxter{
+    position: absolute;
+    top: 80vh;
+    left: 5vw;
+    width: 90vw;
+    height: 25vh;
+    background-color: #5B6647;
+    border-radius: 25px;
+}
+#page11 #boxter h1{
+    font-size: 3vw;
+    font-family: PP Woodland;
+    color: #DFDFC2;
+    position: absolute;
+    top: 8vh;
+    left: 10vw;
+    font-weight: 400;
+}
+#page11 #boxter h2{
+    font-size: 1.3vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    position: absolute;
+    top: 11vh;
+    left: 70vw;
+    font-weight: 500;
+}
+
+#page12{
+    height: 90vh;
+    width: 100%;
+    background-color: #03364F;
+    margin-top: 8%;
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+#page12 #aaa{
+    position: absolute;
+    top: -18vh;
+    left: -1vw;
+    z-index: 99;
+    scale: 0.08;
+}
+#page12 img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    object-position: center;
+    top: 10%;
+    position: absolute;
+    left: 90%;
+}
+#page12 #dot1{
+    width: 100vw;
+    height: 20vh;
+    position: absolute;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 10vw;
+}
+#page12 #dot1 h1{
+    font-size: 1vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-weight: 300;
+}
